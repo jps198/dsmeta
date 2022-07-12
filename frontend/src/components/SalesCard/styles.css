@@ -1,0 +1,95 @@
+.card {
+  background-color: #283142;
+  border-radius: 10px;
+  padding: 40px 10px; /*delimitar espacamento interno*/
+}
+
+.sales-title {
+  color: #676fff;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.form-control-container {
+  margin-bottom: 16px;
+  max-width: 300px;
+}
+
+.form-control {
+  width: 100%;
+  height: 46px;
+  background-color: #1b2531;
+  border: 1px solid #384459;
+  border-radius: 5px;
+  color: #9aaabe;
+  padding: 0px 20px;
+  font-size: 18px;
+}
+
+.sales-table {
+  width: 100%;
+  border-spacing: 0; /*espacamento entre as bordas*/
+  border-collapse: collapse; /*Aparecer a linha entre as tabelas*/
+}
+
+.sales-table thead {
+  height: 55px; /*altura*/
+  font-size: 16px;
+  color: #e9e9e9;
+  font-weight: 700; /*para ficar em negrito*/
+}
+
+.sales-table tbody {
+  font-size: 14px;
+  font-weight: 400; /*peso da fonte*/
+  color: #cfcfcf;
+  text-align: center;
+}
+
+.sales-table tbody tr {
+  height: 74px;
+  border-top: 1px solid #5f6e82;
+}
+
+.sales-table tbody tr:hover > td {
+  background-color: #384459;
+} /* Hover quando passar o mouse em cima fazendo um efeito de cor*/
+
+.sales-table tbody tr:nth-child(odd) {
+  background-color: #242c3b;
+} /*eu quero qual o filho do tr exemplo filho impa sera (odd) ou seja quando a linha for
+impar ai a cor é diferente*/
+
+.red-btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.show576 {
+  display: none; /* Nao mostrar a data quando diminuir a tela*/
+}
+
+.show992 {
+  display: none; /* Nao mostrar a data quando diminuir a tela*/
+}
+
+@media (min-width: 576px) {
+  .show576 {
+    display: table-cell; /*a data vai desaparecer a partir da largura for menor que 576px*/
+  }
+  .card {
+    padding: 35px; /*quando passar de 576 o espaçamento vai para 35px*/
+  }
+  .sales-table tbody tr {
+    height: 55px;
+  }
+  .sales-table tbody {
+    font-size: 18px;
+  }
+} /*quando passar de 576 o espacamento vai para 35px e a data vai aparecer com o nome maior a partir da largura for menor que 576px */
+
+@media (min-width: 992px) {
+  .show992 {
+    display: table-cell;
+  }
+} /*o ID, visitas e vendas vai desaparecer a partir da largura for menor que 992px*/
