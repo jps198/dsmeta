@@ -19,3 +19,13 @@ a:visited {
   color: unset;
   text-decoration: none;
 }
+
+.container{
+  width: 100%; 
+  max-width: 900px; /*largura maxima*/
+  margin: auto; /* Alinhar ao centro*/
+}
+
+#sales{
+  padding: 40px 10px;/*delimitar espacamento interno*/
+}
